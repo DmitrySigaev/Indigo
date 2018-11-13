@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{d5e3eaf4-84b2-4759-b49c-0a63b8942d83}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>indigo-release-libs.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|2.7</InterpreterId>
+    <CommandLineArguments>--preset=win64-2013</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="bingo-release.py" />
+    <Compile Include="indigo-install-r-pack.py" />
+    <Compile Include="indigo-make-by-libs.py" />
+    <Compile Include="indigo-release-java-utils.py" />
+    <Compile Include="indigo-release-libs.py" />
+    <Compile Include="indigo-release-utils.py" />
+    <Compile Include="indigo-update-version.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bingo-oracle\CMakeLists.txt" />
+    <Content Include="bingo-postgres\CMakeLists.txt" />
+    <Content Include="bingo-sqlserver\CMakeLists.txt" />
+    <Content Include="bingo\CMakeLists.txt" />
+    <Content Include="indigo-all\CMakeLists.txt" />
+    <Content Include="indigo-inchi\CMakeLists.txt" />
+    <Content Include="indigo-renderer\CMakeLists.txt" />
+    <Content Include="indigo-utils\CMakeLists.txt" />
+    <Content Include="indigo\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bingo" />
+    <Folder Include="bingo-oracle" />
+    <Folder Include="bingo-postgres" />
+    <Folder Include="bingo-sqlserver" />
+    <Folder Include="indigo" />
+    <Folder Include="indigo-all" />
+    <Folder Include="indigo-inchi" />
+    <Folder Include="indigo-renderer" />
+    <Folder Include="indigo-utils" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|2.7" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
